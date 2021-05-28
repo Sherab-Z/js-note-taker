@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" contents="device-width" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="bootstrap.min.css">  
+    <link rel="stylesheet" href="custom.css">
+    <title>Note Taker</title>
+</head>
+<body>
+    <div id="page-container"> <!-- for center-aligning the whole page -->
+        <div id="input-area">
+            <h1>Note Taker</h1>
+
+            <div id="form">
+                <div id="legend-div">
+                    <legend class="text-success">
+                        Add A New Note:
+                    </legend>
+                </div> <!-- ends legend-div -->
+
+                <div id="textbox-div">
+                    <label id="textbox-label" for="text-box">
+                        Note:
+                    </label>
+                    <input id="textbox" type="text" class="form-control" rows="2" placeholder="Write your note here">
+                    </input>
+                </div> <!-- ends textbox-div -->
+
+                <div id="add-btn-div">
+                    <button id="add-btn" type="submit" class="btn btn-success btn-lg">
+                        Add Note
+                    </button> 
+                </div> <!-- ends btn-div -->
+            </div>
+        </div> <!-- ends input-area -->
+        
+        <div id="note-board">  
+            
+        </div> <!-- ends notes-area -->
+    </div> <!-- ends page-container -->
+    
+    <script src="script.js"></script>
+</body>
+</html>
