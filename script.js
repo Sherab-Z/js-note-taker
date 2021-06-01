@@ -6,23 +6,23 @@ const InputBoxObj = {
 
     btnEl:          document.getElementById( "add-btn" ),
 
-    getDatetime:        function() {
+    getDatetime:    function() {
 
-        let now = new Date();
-        let datetime = `${ now.getDate() }-${ now.getMonth()+1 }-${ now.getFullYear() }` + ' ' +
-                        '|' + ' ' + `${ now.getHours() }:${ now.getMinutes() }`;
-        return datetime;
-        },
+                        let now = new Date();
+                        let datetime = `${ now.getDate() }-${ now.getMonth()+1 }-${ now.getFullYear() }` + ' ' +
+                                        '|' + ' ' + `${ now.getHours() }:${ now.getMinutes() }`;
+                        return datetime;
+                    },
 
-    makeNote:   function() {
+    makeNote:       function() {
         // ensure string does not contain code - if all ok, then: new Note(text, date) [USE event.target to access the button, if it's useful]
-                    let noteStr = this.textboxEl.value;
-                    let datetime = this.getDatetime();
-                    let newNote = new Note( noteStr , datetime );
-                    console.log( 'New note: ' + JSON.stringify(newNote) ); // TESTING
+                        let noteStr = this.textboxEl.value;
+                        let datetime = this.getDatetime();
+                        let newNote = new Note( noteStr , datetime );
+                        console.log( 'New note: ' + JSON.stringify(newNote) ); // TESTING
 
-                    BoardObj.boardArr.push(newNote);
-                    console.log( 'BoardObj.boardArr: ' + JSON.stringify(BoardObj.boardArr) ); // TESTING
+                        BoardObj.boardArr.push(newNote);
+                        console.log( 'BoardObj.boardArr: ' + JSON.stringify(BoardObj.boardArr) ); // TESTING
                     },
 }
 
@@ -95,12 +95,12 @@ const BoardObj = {
 
     boardArr:       [],
 
-    addToBoard:          function(/* ??? */) {
+    addToBoard:     function(/* ??? */) {
 
                         
                     },
 
-    showNotes:        function(/* ??? */) {
+    showNotes:      function(/* ??? */) {
 
                         
                     }

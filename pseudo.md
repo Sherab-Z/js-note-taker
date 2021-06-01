@@ -1,11 +1,11 @@
 OOP Plan:
 
 CLASSES
-• Note: template for making new notes
-• Modal (sub-class of Note): template for making a modal from a particular note
+• Note: for making new notes
+    • Modal (sub-class of Note): for making modal from a particular note
 
 OBJECTS
-• InputBoxObj: upon User clicking 'Add Note', this gets and sends User-input (text str), & current datetime str, to new Note obj
+• InputBoxObj: upon User clicking 'Add Note', this gets and sends User-input str, & current datetime str, to new Note obj
 • BoardObj: holds all notes in an array (boardArr), & adds all notes in boardArr to DOM for those notes to be displayed
 
 1. User clicks 'Add Note' or Enter key
