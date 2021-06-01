@@ -12,6 +12,7 @@
 </head>
 <body>
     <div id="page-container"> <!-- for center-aligning the whole page -->
+        
         <div id="input-area">
             <h1>Note Taker</h1>
 
@@ -34,15 +35,49 @@
                     <button id="add-btn" type="submit" class="btn btn-success btn-lg">
                         Add Note
                     </button> 
-                </div> <!-- ends btn-div -->
+                </div> <!-- ends add-btn-div -->
             </div>
         </div> <!-- ends input-area -->
         
         <div id="note-board">  
             
-        </div> <!-- ends notes-area -->
+        </div> <!-- ends note-board -->
+
     </div> <!-- ends page-container -->
-    
+
+    <div id="block-templates">
+
+        <div id="note-elements">
+            <div id="open-modal-btn-div">
+                <button id="open-modal-btn" type="submit" class="btn btn-success btn-lg">
+                Show Full Note
+                </button>
+            </div>
+            <div id="delete-btn-div">
+                <button id="delete-btn" type="submit" class="btn btn-success btn-lg">
+                Delete
+                </button>
+            </div>
+        </div>
+
+        <div id="modal-elements">
+            <div id="modal-block" class="modal">
+                <div class="modal-header">
+                <span class="close-btn">&times;</span>
+                <h1>I am the Header</h1>
+                </div>
+                <div class="modal-content">
+                <p>this is the text inside the modal</p>
+                </div>
+                <div class="modal-footer">
+                <h2>I am the Footer</h2>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- ends block-templates-->
+
+
     <script src="script.js"></script>
 </body>
 </html>

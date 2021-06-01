@@ -28,17 +28,9 @@ const InputBoxObj = {
 
 
 class Note {
-    detailBtnBlock =    '<div id="detail-btn-div">' +
-                            '<button id="add-btn" type="submit" class="btn btn-success btn-lg">' +
-                            'Add Note' +
-                            '</button>' +
-                        '</div>';
+    detailBtn =    document.getElementById( "open-modal-btn-div" );
 
-    deleteBtnBlock =    '<div id="add-btn-div">' +
-                            '<button id="add-btn" type="submit" class="btn btn-success btn-lg">' +
-                            'Add Note' +
-                            '</button>' +
-                        '</div>';
+    deleteBtn =    document.getElementById( "delete-btn-div" );
 
     constructor( noteStr, datetime ) {
 
@@ -68,12 +60,7 @@ class Modal extends Note {
 
 
 
-    closeBtnBlock =     '<div class="modal">' +
-                            '<div class="modal-content">' +
-                                '<span class="close-btn">&times;</span>' +
-                                '<p>this is the text inside the modal</p>' +
-                            '</div>' +
-                        '</div>';
+    closeBtnBlock =     document.getElementById( "modal-block" );
 
     constructor( noteStr, datetime ) {
         super( noteStr, datetime );
@@ -110,37 +97,3 @@ InputBoxObj.btnEl.addEventListener( 'click', function() {
     console.log("noteStr: " + InputBoxObj.textboxEl.value);
     InputBoxObj.makeNote();
 } );
-
-
-
-
-/*
-
-// eventlistener for addBtn: validate note str, grab prior notes as JSON into allNotes object, grab new note as JSON into object, push new note onto allNotes object
-
-addBtn.addEventListener(click, function (){
-
-    let allNotesObj;
-    let noteInputBox = document.getElementById("textbox");
-    let priorNotes = document.getElementById("notes-area");
-
-    // if prior notes exist: parse them into an object
-    if (noteInputBox.value == '') {
-        allNotesObj = [];
-    } else {
-        allNotesObj = JSON.parse(priorNotes);
-    }
-
-    // add date
-    let now = new Date();
-    let datetime = `${now.getDate()}-${now.getMonth()+1}-${now.getFullYear()}' ' 
-                    | ' ' ${now.getHours()}:${now.getMinutes()}`;
-    
-    // put into local storage
-    let newNoteObj = {note: noteInputBox.value, date: datetime.value};
-
-
-});
-
-/
-*/
