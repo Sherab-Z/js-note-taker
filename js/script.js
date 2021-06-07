@@ -1,4 +1,7 @@
-// call displayNotes(); 
+$(document).ready(function() {
+
+});
+
 
 const InputBoxObj = {
 
@@ -96,4 +99,12 @@ const BoardObj = {
 InputBoxObj.btnEl.addEventListener( 'click', function() {
     console.log("noteStr: " + InputBoxObj.textboxEl.value);
     InputBoxObj.makeNote();
+} );
+InputBoxObj.btnEl.addEventListener( 'keyup', function() {
+    if (e.keyCode === 13) {
+        console.log("Input-retrieval triggered by Enter key")
+        e.preventDefault();
+        console.log("noteStr: " + InputBoxObj.textboxEl.value);
+        InputBoxObj.makeNote();
+    }
 } );

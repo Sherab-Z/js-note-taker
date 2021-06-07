@@ -43,14 +43,20 @@ OBJECTS
 
 TO-DO:
 
-//Essential:
-• append newNote to boardArr
+// Essential:
+• Make note from textbox input + datetime
+• Append note to boardArr
+• Display boardArr
+• Create modal template in index.html
+• Display modal with parent note's prop's on 'view detail' btn click - (will sub-classing work?)
+• Delete note from boardArr on 'Delete' button click
+• 
 
-//Functional:
+// Extra / functional:
 • Add validation of input str 
 • Allow input via Enter key 
 
-//Cosmetic:
+// Cosmetic:
 • Improve dimensions of input textbox
 • Fix 'Note:' text next to input textbox squeezing in behind textbox when narrowing the page
 • 
