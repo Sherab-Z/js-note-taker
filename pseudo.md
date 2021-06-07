@@ -1,4 +1,4 @@
-OOP Plan:
+OOP Plan:   
 
 CLASSES
 • Note: for making new notes
