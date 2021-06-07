@@ -1,5 +1,10 @@
 $(document).ready(function() {
-
+    $(document).on("keypress", "input", function(e){
+        if(e.which == 13){
+            console.log("noteStr (via Enter key-press): " + InputBoxObj.textboxEl.value);
+            InputBoxObj.makeNote();     
+        }
+    });
 });
 
 
@@ -99,12 +104,4 @@ const BoardObj = {
 InputBoxObj.btnEl.addEventListener( 'click', function() {
     console.log("noteStr: " + InputBoxObj.textboxEl.value);
     InputBoxObj.makeNote();
-} );
-InputBoxObj.btnEl.addEventListener( 'keyup', function() {
-    if (e.keyCode === 13) {
-        console.log("Input-retrieval triggered by Enter key")
-        e.preventDefault();
-        console.log("noteStr: " + InputBoxObj.textboxEl.value);
-        InputBoxObj.makeNote();
-    }
-} );
+});
