@@ -21,11 +21,8 @@ const inputBoxObj = {
                     let newNote = new Note( noteStr , datetime );
                     console.log( 'New note: ' + JSON.stringify(newNote) ); // TESTING
 
-                    boardObj.boardArr.push(newNote); 
-                    
-                    // TODO: reference newNote properly
-                    
-                    
+                    boardObj.notesArr.push(newNote); 
+
                     console.log( 'boardObj.boardArr: ' + JSON.stringify(boardObj.boardArr) ); // TESTING
                     },
 }
