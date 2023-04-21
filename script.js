@@ -1,6 +1,6 @@
 // call displayNotes(); 
 
-const InputBoxObj = {
+const inputBoxObj = {
 
     textboxEl:      document.getElementById( "textbox" ),
 
@@ -9,8 +9,8 @@ const InputBoxObj = {
     getDatetime:        function() {
 
         let now = new Date();
-        let datetime = `${ now.getDate() }-${ now.getMonth()+1 }-${ now.getFullYear() }` + ' ' +
-                        '|' + ' ' + `${ now.getHours() }:${ now.getMinutes() }`;
+        let datetime = `${ now.getDate() }-${ now.getMonth()+1 }-${ now.getFullYear() }` +
+                        ', ' + `${ now.getHours() }:${ now.getMinutes() }`;
         return datetime;
         },
 
@@ -21,8 +21,12 @@ const InputBoxObj = {
                     let newNote = new Note( noteStr , datetime );
                     console.log( 'New note: ' + JSON.stringify(newNote) ); // TESTING
 
-                    BoardObj.boardArr.push(newNote);
-                    console.log( 'BoardObj.boardArr: ' + JSON.stringify(BoardObj.boardArr) ); // TESTING
+                    boardObj.boardArr.push(newNote); 
+                    
+                    // TODO: reference newNote properly
+                    
+                    
+                    console.log( 'boardObj.boardArr: ' + JSON.stringify(boardObj.boardArr) ); // TESTING
                     },
 }
 
@@ -58,7 +62,7 @@ class Note {
     }
 
     deleteNote() {
-        // when a note's 'x' button is clicked - remove that note from memory
+        // when a note's 'delete' button is clicked, remove that note from boardObj.notesArr
     }
 
 }
@@ -89,11 +93,11 @@ class Modal extends Note {
 }
 
 
-const BoardObj = {
+const boardObj = {
     
     boardEl:        document.getElementById( "note-board" ),
 
-    boardArr:       [],
+    notesArr:       [],
 
     addToBoard:          function(/* ??? */) {
 
@@ -106,41 +110,7 @@ const BoardObj = {
                     }
 }
 
-InputBoxObj.btnEl.addEventListener( 'click', function() {
-    console.log("noteStr: " + InputBoxObj.textboxEl.value);
-    InputBoxObj.makeNote();
+inputBoxObj.btnEl.addEventListener( 'click', function() {
+    console.log("noteStr: " + inputBoxObj.textboxEl.value);
+    inputBoxObj.makeNote();
 } );
-
-
-
-
-/*
-
-// eventlistener for addBtn: validate note str, grab prior notes as JSON into allNotes object, grab new note as JSON into object, push new note onto allNotes object
-
-addBtn.addEventListener(click, function (){
-
-    let allNotesObj;
-    let noteInputBox = document.getElementById("textbox");
-    let priorNotes = document.getElementById("notes-area");
-
-    // if prior notes exist: parse them into an object
-    if (noteInputBox.value == '') {
-        allNotesObj = [];
-    } else {
-        allNotesObj = JSON.parse(priorNotes);
-    }
-
-    // add date
-    let now = new Date();
-    let datetime = `${now.getDate()}-${now.getMonth()+1}-${now.getFullYear()}' ' 
-                    | ' ' ${now.getHours()}:${now.getMinutes()}`;
-    
-    // put into local storage
-    let newNoteObj = {note: noteInputBox.value, date: datetime.value};
-
-
-});
-
-/
-*/
