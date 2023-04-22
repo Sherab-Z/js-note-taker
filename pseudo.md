@@ -5,8 +5,8 @@ CLASSES
 • Modal (sub-class of Note): template for making a modal from a particular note
 
 OBJECTS
-• InputBoxObj: upon User clicking 'Add Note', this gets and sends User-input (text str), & current datetime str, to new Note obj
-• BoardObj: holds all notes in an array (boardArr), & adds all notes in boardArr to DOM for those notes to be displayed
+• inputBoxObj: upon User clicking 'Add Note', this gets and sends User-input (text str), & current datetime str, to new Note obj
+• boardObj: holds all notes in an array (notesArr), & adds all notes in notesArr to DOM for those notes to be displayed on boardObj.boardEl
 
 1. User clicks 'Add Note' or Enter key
 
@@ -16,7 +16,7 @@ OBJECTS
 
 3. Add note:
     //DONE - create newNote obj from Note class
-    - append newNote to BoardObj.boardArr array
+    - append newNote to BoardObj.notesArr array
     - append nodes to HTML DOM, using similar method as below:
 
             /* create + append Delete Button to each new list item */
@@ -31,7 +31,8 @@ OBJECTS
 
 5. Delete a note: eventListener via 'this'
     - eventListener for 'Delete' btn click
-    - remove deleted note from DOM
+    - remove note from boardObj.notesArr array
+    - refresh DOM display
 
 6. View note in modal:  (Modal will need HTML & CSS also)
     - eventListener for 'View Detail' btn click
@@ -43,14 +44,19 @@ OBJECTS
 
 TO-DO:
 
-//Essential:
-• append newNote to boardArr
+//  Essential:
+• [x] append newNote to notesArr
+• [] display notesArr el's in boardEl UI div
+• [] make Modal's work
+• [] ensure Delete btn works
+• [] Create col containers with CSS Grid
+• [] Manage notes dynamic layout with CSS Flexbox
+• [] Add validation of input str 
 
-//Functional:
-• Add validation of input str 
-• Allow input via Enter key 
+//  Nice to have:
+• [] Allow input via Enter key 
 
-//Cosmetic:
-• Improve dimensions of input textbox
-• Fix 'Note:' text next to input textbox squeezing in behind textbox when narrowing the page
+//  Cosmetic:
+• [] Improve dimensions of input textbox
+• [] Fix 'Note:' text next to input textbox squeezing in behind textbox when narrowing the page
 • 
