@@ -46,9 +46,9 @@ TO-DO:
 
 //  Essential:
 • [x] append newNote to notesArr
-• [] display notesArr el's in boardEl UI div
+• [x] display notesArr el's in boardEl UI div
 • [] make Modal's work
-• [] ensure Delete btn works
+• [] make Delete btn work
 • [] Create col containers with CSS Grid
 • [] Manage notes dynamic layout with CSS Flexbox
 • [] Add validation of input str 
